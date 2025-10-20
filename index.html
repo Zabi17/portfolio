@@ -1,80 +1,319 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body class="gradient-background">
-    <header>
-        <h1><em>My Portfolio</em></h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am Zabi Ahmed , A passionate and detail-oriented web developer with a strong foundation in front-end
-          technologies with (jQuery,React) and a keen interest in full-stack development.
-          Skilled at building responsive, user-friendly websites and continuously learning new frameworks
-          and tools.<br><br> Also possesses strong problem-solving abilities and thrives in collaborative environments.
-          Currently pursuing B.Tech (IT) at Aalim Muhammad Salegh College of Engineering while
-          expanding knowledge of back-end technologies and advanced javascript frameworks.</p>
-    </section>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <section id="skills">
-      <h2>Technical skills</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS ( Flex-box, Grid, Bootsrtap)</li>
-        <li>JavaScript ( jQuery)</li>
-        <li>Node.js ( Express.js)</li>
-        <li>React</li>
-        <li>Python</li>
-        <li>TECHNOLOGIES : git, github, VS code, Chrome developer tools</li>
-      </ul>
-  </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-
-          <div class="project one">
-            <img src="./images/Sequence game.png" alt="Project 1">
-            <h3>Sequence-game:</h3>
-            <p>A basic game to boost up your memory power.</p>
-            <a href=" https://zabi17.github.io/Sequence-game/" class="btn">View Project</a>
+  <body>
+    <!-- MAIN CARD CONTAINER -->
+    <div class="portfolio-card">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-inner">
+          <div class="profile">
+            <img src="./assets/images/pfp.png" alt="Profile" class="avatar" />
+            <h2>Zabi Ahmed</h2>
+            <p>Web Developer</p>
           </div>
 
-          <div class="project">
-            <img src="#" alt="Project 2">
-            <h3>Project Title 2</h3>
-            <p>Description of Project 2</p>
-            <a href="#" class="btn">View Project</a>
-          </div>
+          <nav class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+          </nav>
 
-          <div class="project">
-            <img src="#" alt="Project 2">
-            <h3>Project Title 2</h3>
-            <p>Description of Project 2</p>
-            <a href="#" class="btn">View Project</a>
-          </div>
-          <!-- Add more projects here -->
+          <footer>
+            <p>© 2025 My Portfolio</p>
+          </footer>
         </div>
-      </section>
+      </aside>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: zabiahmed3717@gmail.com</p>
-        <p>GitHub :<a class="bg" href="https://www.github.com/Zabi17">Checkout GitHub !</a></p>
-        <p>Linkedin :<a class="bg" href="https://www.linkedin.com/in/zabiahmed3717">Check Linkedin Profile !</a></p>
-        
-    </section>
-    <script src="./index.js"></script>
-</body>
+      <!-- Toggle Button -->
+      <button class="toggle-btn" id="toggle-btn" title="open Sidebar">☰</button>
+
+      <!-- Light/Dark Toggle -->
+      <button class="mode-btn" id="mode-btn" title="Toggle Light/Dark Mode">
+        🌙
+      </button>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <section id="home" class="section hero">
+          <h1 class="fade-in">I am <span class="highlight"></span></h1>
+          <p class="fade-in-delay">
+            Create responsive wesites for user friendly experiences with modern
+            design.
+          </p>
+          <a href="./assets/pdf/final 74.docx"
+            ><button class="btn fade-in-delay">Download Resume</button></a
+          >
+        </section>
+
+        <section id="about" class="section">
+          <h2>About Me</h2>
+          <p>
+            I’m Zabi Ahmed, A passionate and detail-oriented web developer with
+            a strong foundation in front-end technologies with (React +
+            tailwind) and a keen interest in full-stack development. Skilled at
+            building responsive, user-friendly websites and continuously
+            learning new frameworks and tools.
+          </p>
+          <p>
+            Also possesses strong problem-solving abilities and thrives in
+            collaborative environments. Recently passed out of college degree in
+            B.Tech (IT) at Aalim Muhammad Salegh College of Engineering,
+            Chennai, Tamil Nadu. While expanding knowledge of back-end
+            technologies and advanced concept in frameworks and libraries.
+          </p>
+        </section>
+
+        <section id="projects" class="section">
+          <h2>Projects</h2>
+          <div class="image-track-container">
+            <div
+              id="image-track"
+              data-mouse-down-at="0"
+              data-prev-percentage="0"
+            >
+              <a
+                href="https://zabi17.github.io/Sequence-game/"
+                class="tooltip"
+                data-tooltip="Simon Game"
+                draggable="false"
+                target="_blank"
+                ><img
+                  src="./assets/images/smoothimg.png"
+                  alt="simon game"
+                  draggable="false"
+              /></a>
+              <a
+                href=""
+                class="tooltip"
+                data-tooltip="Expense Manager"
+                draggable="false"
+                target="_blank"
+                ><img
+                  src="./assets/images/expense_manager_1.png"
+                  alt="expense_manager"
+                  draggable="false"
+              /></a>
+              <a
+                href=""
+                class="tooltip"
+                data-tooltip="BookMyTurf"
+                draggable="false"
+                target="_blank"
+                ><img
+                  src="./assets/images/turf.png"
+                  alt="turf"
+                  draggable="false"
+              /></a>
+              <a
+                href="https://zabi17.github.io/portfolio/"
+                class="tooltip"
+                data-tooltip="Portfolio"
+                draggable="false"
+                target="_blank"
+                ><img
+                  src="./assets/images/portfolio.png"
+                  alt="portfolio"
+                  draggable="false"
+              /></a>
+              <a
+                href=""
+                class="tooltip"
+                data-tooltip="Dashboard"
+                draggable="false"
+                target="_blank"
+                ><img
+                  src="./assets/images/dashboard.png"
+                  alt="dashboard"
+                  draggable="false"
+              /></a>
+              <a
+                href=""
+                class="tooltip"
+                data-tooltip="Todo-list-React"
+                draggable="false"
+                target="_blank"
+                ><img
+                  src="./assets/images/Todo-list-React.png"
+                  alt="Todo-list-React"
+                  draggable="false"
+              /></a>
+              <a
+                href=""
+                class="tooltip"
+                data-tooltip="Todo-list-jQuery"
+                draggable="false"
+                target="_blank"
+                ><img
+                  src="./assets/images/Todo-list-jQuery.png"
+                  alt="Todo-list-jQuery"
+                  draggable="false"
+              /></a>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" class="section">
+          <h2>Skills</h2>
+          <ul class="skills-list">
+            <li>
+              <img
+                src="./assets/svg/html-5-svgrepo-com.svg"
+                alt="html"
+                height="30"
+              />HTML
+            </li>
+            <li>
+              <img
+                src="./assets/svg/css-3-svgrepo-com.svg"
+                alt="css"
+                height="30"
+              />CSS
+            </li>
+            <li>
+              <img
+                src="./assets/svg/js-svgrepo-com.svg"
+                alt="js"
+                height="30"
+              />JavaScript
+            </li>
+            <li>
+              <img
+                src="./assets/svg/react-svgrepo-com.svg"
+                alt="react"
+                height="30"
+              />React
+            </li>
+            <li>
+              <img
+                src="./assets/svg/bootstrap-svgrepo-com.svg"
+                alt="BootStrap"
+                height="30"
+              />BootStrap
+            </li>
+            <li>
+              <img
+                src="./assets/svg/tailwind-svgrepo-com.svg"
+                alt="tailwind"
+                height="30"
+              />Tailwind
+            </li>
+            <li>
+              <img
+                src="./assets/svg/node-js-svgrepo-com.svg"
+                alt="node"
+                height="30"
+              />Node.js
+            </li>
+            <li>
+              <img
+                src="./assets/svg/express-svgrepo-com.svg"
+                alt="express"
+                height="30"
+              />Express.js
+            </li>
+            <li>
+              <img
+                src="./assets/svg/python-svgrepo-com.svg"
+                alt="python"
+                height="30"
+              />Python
+            </li>
+            <li>
+              <img
+                src="./assets/svg/ejs-svgrepo-com.svg"
+                alt="EJS"
+                height="30"
+              />EJS
+            </li>
+            <li>
+              <img
+                src="./assets/svg/json-svgrepo-com.svg"
+                alt="json"
+                height="30"
+              />JSON
+            </li>
+            <li>
+              <img
+                src="./assets/svg/postgresql-logo-svgrepo-com.svg"
+                alt="PostgreSQL"
+                height="30"
+              />PostgreSQL
+            </li>
+            <li>
+              <img
+                src="./assets/svg/api-interface-svgrepo-com.svg"
+                alt="API"
+                height="35"
+              />RESTful API
+            </li>
+          </ul>
+        </section>
+
+        <section id="experience" class="section">
+          <h2>Experience</h2>
+          <h3>Altsense - Jr.Web Developer</h3>
+          <ul class="experience-list">
+            <li>
+              Created a Expense manager with a signup/login page. This handles
+              the complete income to expense calculation with a filtering
+              expense by day/week/month. And an advanced filtering of
+              months/years. Provides a clear visualization of charts and
+              Downloadable csv files.
+            </li>
+            <li>
+              Developed a secure login system with jQuery that redirected users
+              to a personalized dashboard featuring a functional to-do list
+              application, improving user engagement.
+            </li>
+            <li>
+              Collaborated with senior developers to create and integrate key
+              static pages (Privacy Policy, About Us, Disclaimer, Contact Us),
+              ensuring consistency with the site’s structure and brand identity.
+              Managed and uploaded 100+ blog posts, optimizing formatting and
+              layout for readability and SEO-friendliness.
+            </li>
+            <li>
+              Assisted in website maintenance and content updates, contributing
+              to smoother workflows for the development team. Gained practical
+              experience with front-end development, version control (Git), and
+              teamwork in an agile environment, while strengthening
+              problem-solving and debugging skills.
+            </li>
+          </ul>
+        </section>
+
+        <section id="contact" class="section">
+          <h2>Contact</h2>
+          <a href="tel:+917358310962"
+            ><img src="./assets/svg/phone-call-svgrepo-com.svg" height="30px" />
+            Phone</a
+          >
+          <a href="mailto:zabiahmed3717@gmail.com?subject=Hello&body=Hi there!" target="_blank"
+            ><img src="./assets/svg/gmail-svgrepo-com.svg" height="30px" />
+            Email</a
+          >
+          <a href="https://www.github.com/Zabi17" target="_blank"
+            ><img src="./assets/svg/github-142-svgrepo-com.svg" height="30px" />
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/zabiahmed3717" target="_blank"
+            ><img src="./assets/svg/linkedin-svgrepo-com.svg" height="30px" />
+            Linkedin</a
+          >
+        </section>
+      </main>
+    </div>
+    <script defer src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  </body>
 </html>
