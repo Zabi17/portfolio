@@ -317,7 +317,7 @@ h2 {
 .btn:hover {
   color: white;
   transform: translateY(-3px);
-  box-shadow: var(--shadow-color);
+  box-shadow: 0 8px 12px black;
 }
 
 .btn:after {
@@ -370,6 +370,9 @@ h2 {
   flex-direction: column;
   justify-content: flex-start;
   gap: 1.5rem;
+}
+#contact{
+  gap: 0.7rem;
 }
 
 /* ======= SKILLS ========= */
@@ -462,7 +465,6 @@ h2 {
 }
 
 /* ABOUT SECTION & CONTACT */
-#contact p,
 #about p {
   background: var(--bg-card);
   color: var(--text-color);
@@ -484,7 +486,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   width: fit-content;
   color: var(--text-color);
   font-weight: 500;
@@ -606,6 +608,8 @@ body.animate-in #experience {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   user-select: none;
   transition: transform 0.3s;
+  border: 3px solid black;
+  border-radius: 10px;
 }
 
 #image-track img:hover {
@@ -667,7 +671,7 @@ body.animate-in #experience {
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(0);
-  transition-delay: 1.5s; /* wait before showing */
+  transition-delay: .5s; /* wait before showing */
   visibility: visible;
 }
 
@@ -850,11 +854,6 @@ body.animate-in .profile {
   #projects h2 {
     font-size: 1.6rem;
   }
-
-  #image-track  img {
-    width: 35vmin;
-    height: 45vmin;
-  }
 }
 
 @media (max-width: 768px) {
@@ -875,9 +874,12 @@ body.animate-in .profile {
     font-size: 0.9rem;
     padding: 0.9rem 1rem;
   }
-  #contact p,
   #about p {
-    font-size: 0.95rem;
+    font-size: 0.80rem;
     padding: 1.2rem 1.4rem;
+  }
+  #image-track  img {
+    width: 40vmin;
+    height: 50vmin;
   }
 }
