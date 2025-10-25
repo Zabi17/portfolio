@@ -495,16 +495,13 @@ h2 {
   padding: 0.8rem 1.4rem;
   border-radius: 8px;
   box-shadow: 0 4px 15px var(--shadow-color);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
   margin-top: 0.5rem;
-  box-sizing: border-box;
 }
 
 
 #contact a:hover {
-  transform: scale(1.1);
-  border: 3px solid #007bff;
-  color: var(--text-color);
+  outline: 3px solid #007bff;
   box-shadow: 0 8px 25px rgba(0, 123, 255, 0.25);
 }
 
@@ -554,22 +551,6 @@ h2 {
   transform: translateY(-4px);
   box-shadow: 0 8px 25px rgba(0, 123, 255, 0.2);
 }
-
-/* ENTRY ANIMATIONS: unify about & experience and keep other animations grouped */
-
-/* unified entry animation for about & experience */
-/* #about,
-#experience {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-body.animate-in #about,
-body.animate-in #experience {
-  opacity: 1;
-  transform: translateY(0);
-} */
 
 /* Projects / Smooth Glide Images */
 .image-track-container {
@@ -687,11 +668,6 @@ body.animate-in #experience {
   transition: none;
   border-radius: 0;
 }
-
-
-
-
-
 
 /* ENTRY ANIMATIONS: sidebar & main-content from bottom */
 body:not(.animate-in) .sidebar-inner {
