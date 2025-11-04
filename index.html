@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -75,90 +79,279 @@
 
         <section id="projects" class="section">
           <h2>Projects</h2>
-          <div class="image-track-container">
-            <div
-              id="image-track"
-              data-mouse-down-at="0"
-              data-prev-percentage="0"
-            >
-              <a
-                href="https://zabi17.github.io/Sequence-game/"
-                class="tooltip"
-                data-tooltip="Simon Game"
-                draggable="false"
-                target="_blank"
-                ><img
-                  src="./assets/images/smoothimg.png"
-                  alt="simon game"
-                  draggable="false"
-              /></a>
-              <a
-                href=""
-                class="tooltip"
-                data-tooltip="Expense Manager"
-                draggable="false"
-                target="_blank"
-                ><img
-                  src="./assets/images/expense_manager_1.png"
-                  alt="expense_manager"
-                  draggable="false"
-              /></a>
-              <a
-                href=""
-                class="tooltip"
-                data-tooltip="BookMyTurf"
-                draggable="false"
-                target="_blank"
-                ><img
-                  src="./assets/images/turf.png"
-                  alt="turf"
-                  draggable="false"
-              /></a>
-              <a
-                href="https://zabi17.github.io/portfolio/"
-                class="tooltip"
-                data-tooltip="Portfolio"
-                draggable="false"
-                target="_blank"
-                ><img
-                  src="./assets/images/portfolio.png"
-                  alt="portfolio"
-                  draggable="false"
-              /></a>
-              <a
-                href=""
-                class="tooltip"
-                data-tooltip="Dashboard"
-                draggable="false"
-                target="_blank"
-                ><img
-                  src="./assets/images/dashboard.png"
-                  alt="dashboard"
-                  draggable="false"
-              /></a>
-              <a
-                href="https://to-do-list-react-omega-seven.vercel.app"
-                class="tooltip"
-                data-tooltip="Todo-list-React"
-                draggable="false"
-                target="_blank"
-                ><img
-                  src="./assets/images/Todo-list-React.png"
-                  alt="Todo-list-React"
-                  draggable="false"
-              /></a>
-              <a
-                href=""
-                class="tooltip"
-                data-tooltip="Todo-list-jQuery"
-                draggable="false"
-                target="_blank"
-                ><img
-                  src="./assets/images/Todo-list-jQuery.png"
-                  alt="Todo-list-jQuery"
-                  draggable="false"
-              /></a>
-            </div>
+          <div class="card-container">
+            <article class="article-wrapper">
+              <img
+                src="./assets/images/simon.png"
+                alt="simon"
+                class="container-project"
+              />
+              <div class="project-info">
+                <div class="flex-pr">
+                  <a
+                    href="https://zabi17.github.io/Sequence-game/"
+                    target="_blank"
+                    class="project-name"
+                  >
+                    <div class="project-title">Simon Game</div>
+                  </a>
+                  <div class="project-hover">
+                    <svg
+                      style="color: black"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2em"
+                      height="2em"
+                      color="black"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <line x1="12" y1="19" x2="12" y2="5"></line>
+                      <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <hr />
+                <p class="description">
+                  A sequence based game to improve your memory. with responsive
+                  and smooth animatioin.
+                </p>
+              </div>
+            </article>
+            <article class="article-wrapper">
+              <img
+                src="./assets/images/expense_manager_1.png"
+                alt="expense_manager"
+                class="container-project"
+              />
+              <div class="project-info">
+                <div class="flex-pr">
+                  <a href="" target="_blank" class="project-name">
+                    <div class="project-title">Expense Manager</div>
+                  </a>
+                  <div class="project-hover">
+                    <svg
+                      style="color: black"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2em"
+                      height="2em"
+                      color="black"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <line x1="12" y1="19" x2="12" y2="5"></line>
+                      <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <hr />
+                <p class="description">
+                  Manage all you income/expense with dynamic data handling with
+                  Downloadable CSV files.
+                </p>
+              </div>
+            </article>
+            <article class="article-wrapper">
+              <img
+                src="./assets/images/Todo-list-React.png"
+                alt="todo-list-React"
+                class="container-project"
+              />
+              <div class="project-info">
+                <div class="flex-pr">
+                  <a
+                    href="https://to-do-list-react-omega-seven.vercel.app"
+                    target="_blank"
+                    class="project-name"
+                  >
+                    <div class="project-title">Todo list React</div>
+                  </a>
+                  <div class="project-hover">
+                    <svg
+                      style="color: black"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2em"
+                      height="2em"
+                      color="black"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <line x1="12" y1="19" x2="12" y2="5"></line>
+                      <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <hr />
+                <p class="description">
+                  ask management app built using React, allowing users to
+                  create, update, and delete todos easily.
+                </p>
+              </div>
+            </article>
+            <article class="article-wrapper">
+              <img
+                src="./assets/images/Todo-list-jQuery.png"
+                alt="Todo-list-jQuery"
+                class="container-project"
+              />
+              <div class="project-info">
+                <div class="flex-pr">
+                  <a
+                    href="https://zabi17.github.io/todo-list-localStorage/"
+                    target="_blank"
+                    class="project-name"
+                  >
+                    <div class="project-title">Todo list jQuery</div>
+                  </a>
+                  <div class="project-hover">
+                    <svg
+                      style="color: black"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2em"
+                      height="2em"
+                      color="black"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <line x1="12" y1="19" x2="12" y2="5"></line>
+                      <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <hr />
+                <p class="description">
+                  Simple todo app that saves all tasks in browser LocalStorage,
+                  keeping data even after refreshing.
+                </p>
+              </div>
+            </article>
+            <article class="article-wrapper">
+              <img
+                src="./assets/images/dashboard.png"
+                alt="dashboard"
+                class="container-project"
+              />
+              <div class="project-info">
+                <div class="flex-pr">
+                  <a href="" target="_blank" class="project-name">
+                    <div class="project-title">Professional Dashboard</div>
+                  </a>
+                  <div class="project-hover">
+                    <svg
+                      style="color: black"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2em"
+                      height="2em"
+                      color="black"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <line x1="12" y1="19" x2="12" y2="5"></line>
+                      <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <hr />
+                <p class="description">
+                  Customizable dashboard where users can rearrange widgets and
+                  view real-time updated data in organized sections.
+                </p>
+              </div>
+            </article>
+            <article class="article-wrapper">
+              <img
+                src="./assets/images/turf.png"
+                alt="BookMyTurf"
+                class="container-project"
+              />
+              <div class="project-info">
+                <div class="flex-pr">
+                  <a href="" target="_blank" class="project-name">
+                    <div class="project-title">BookMyTurf</div>
+                  </a>
+                  <div class="project-hover">
+                    <svg
+                      style="color: black"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2em"
+                      height="2em"
+                      color="black"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <line x1="12" y1="19" x2="12" y2="5"></line>
+                      <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <hr />
+                <p class="description">
+                  Online platform for booking sports turfs, selecting time
+                  slots, managing turfs, and tracking reservations efficiently.
+                </p>
+              </div>
+            </article>
+            <article class="article-wrapper">
+              <img
+                src="./assets/images/portfolio.png"
+                alt=""
+                class="container-project"
+              />
+              <div class="project-info">
+                <div class="flex-pr">
+                  <a href="#" class="project-name">
+                    <div class="project-title">Portfolio</div>
+                  </a>
+                  <div class="project-hover">
+                    <svg
+                      style="color: black"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2em"
+                      height="2em"
+                      color="black"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <line x1="12" y1="19" x2="12" y2="5"></line>
+                      <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <hr />
+                <p class="description">
+                  Personal website displaying projects, skills, experience,
+                  contact information, and achievements for professional
+                  showcasing online.
+                </p>
+              </div>
+            </article>
           </div>
         </section>
 
@@ -294,22 +487,34 @@
 
         <section id="contact" class="section">
           <h2>Contact</h2>
-          <a href="tel:+917358310962"
-            ><img src="./assets/svg/phone-call-svgrepo-com.svg" height="30px" />
-            Phone</a
-          >
-          <a href="mailto:zabiahmed3717@gmail.com?subject=Hello&body=Hi there!" target="_blank"
-            ><img src="./assets/svg/gmail-svgrepo-com.svg" height="30px" />
-            Email</a
-          >
-          <a href="https://www.github.com/Zabi17" target="_blank"
-            ><img src="./assets/svg/github-142-svgrepo-com.svg" height="30px" />
-            GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/zabiahmed3717" target="_blank"
-            ><img src="./assets/svg/linkedin-svgrepo-com.svg" height="30px" />
-            Linkedin</a
-          >
+          <div class="contact-me">
+            <a href="tel:+917358310962"
+              ><img
+                class="contact-img"
+                src="./assets/svg/phone-call-svgrepo-com.svg"
+                height="30px"
+              />
+              Phone</a
+            >
+            <a
+              href="mailto:zabiahmed3717@gmail.com?subject=Hello&body=Hi there!"
+              target="_blank"
+              ><img class="contact-img" src="./assets/svg/gmail-svgrepo-com.svg" height="30px" />
+              Email</a
+            >
+            <a href="https://www.github.com/Zabi17" target="_blank"
+              ><img
+                class="contact-img"
+                src="./assets/svg/github-142-svgrepo-com.svg"
+                height="30px"
+              />
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/zabiahmed3717" target="_blank"
+              ><img class="contact-img" src="./assets/svg/linkedin-svgrepo-com.svg" height="30px" />
+              Linkedin</a
+            >
+          </div>
         </section>
       </main>
     </div>
