@@ -772,10 +772,12 @@ h2 {
   white-space: normal;         /* allow wrapping */
   overflow-wrap: break-word;   /* break long words if needed */
   word-break: break-word;
+
 }
 
 .article-wrapper:hover .project-title{
   color: #007bff;
+  text-decoration: underline;
 }
 
 
