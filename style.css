@@ -404,6 +404,13 @@ footer {
   margin-top: 20px;
 }
 
+.scroll-tip{
+  position: relative;
+  top: 160px;
+  text-align: center;
+  opacity: 0.2 !important; 
+}
+
 h1,
 h2 {
   font-weight: 600;
@@ -1036,5 +1043,9 @@ body.animate-in .profile {
   #image-track  img {
     width: 40vmin;
     height: 50vmin;
+  }
+
+  .main-content{
+    padding: 1.5rem;
   }
 }
