@@ -64,7 +64,7 @@ mainContent.addEventListener("scroll", () => {
   });
 });
 
-/*----------------------------- new btn animation---------------------------- */
+/*----------------------------- btn animation start---------------------------- */
 
 const modeToggleInput = document.getElementById("input");
 
@@ -88,7 +88,7 @@ modeToggleInput.addEventListener("change", function () {
   }
 });
 
-/*----------------------------- end btn animation---------------------------- */
+/*-----------------------------  btn animation end---------------------------- */
 
 
 /* ----Auto Typing------ */
