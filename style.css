@@ -459,7 +459,7 @@ h2 {
 .btn {
   padding: 0.8rem 1.5rem;
   border: none;
-  background: rgb(20, 20, 20);
+  background: #2A2B33;
   color: #fff;
   border-radius: 2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.705);
@@ -991,6 +991,12 @@ body.animate-in .profile {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
+  body {
+    height: 100dvh;
+    align-items: stretch;
+    justify-content: stretch;
+  }
+
   .sidebar {
     transform: translateX(-100%);
     position: absolute;
@@ -1005,12 +1011,19 @@ body.animate-in .profile {
   }
 
   .portfolio-card {
+    width: 100%;
+    height: 100dvh;
+    border-radius: 0;
+    box-shadow: none;
     flex-direction: column;
-    height: 95vh;
   }
 
   .main-content {
     padding: 2rem;
+  }
+
+  .section {
+    min-height: auto;
   }
 
   #projects h2 {
@@ -1019,10 +1032,11 @@ body.animate-in .profile {
 }
 
 @media (max-width: 768px) {
+  #about,
   #skills,
   #contact,
   #experience {
-    padding: 2rem 1.2rem;
+    padding: 2rem 1rem;
   }
   #skills h2,
   #contact h2,
@@ -1038,7 +1052,7 @@ body.animate-in .profile {
   }
   #about p {
     font-size: 0.80rem;
-    padding: 1.2rem 1.4rem;
+    padding: 1.2rem 1.25rem;
   }
   #image-track  img {
     width: 40vmin;
@@ -1046,6 +1060,6 @@ body.animate-in .profile {
   }
 
   .main-content{
-    padding: 1.5rem;
+    padding: 1.1rem;
   }
 }
