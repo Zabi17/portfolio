@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -39,7 +39,9 @@
       </aside>
 
       <!-- Toggle Button -->
-      <button class="toggle-btn" id="toggle-btn" title="open Sidebar">☰</button>
+      <button class="toggle-btn" id="toggle-btn" title="open Sidebar">
+        ☰
+      </button>
 
       <!-- Light/Dark Toggle -->
       <button class="mode-btn" id="mode-btn" title="Toggle Light/Dark Mode">
@@ -113,14 +115,22 @@
       <!-- Main Content -->
       <main class="main-content">
         <section id="home" class="section hero">
-          <h1 class="fade-in">I am <span class="highlight"></span></h1>
-          <p class="fade-in-delay">
-            I’m a Full-Stack Developer who turns ideas into scalable, real-world applications.
-          </p>
-          <a href="./assets/pdf/ZabiAhmedResume.pdf">
-            <button class="btn fade-in-delay">Download Resume</button>
-          </a>
-          <p class="scroll-tip">⇓⇓⇓ Scroll Down ⇓⇓⇓</p>
+          <div class="hero-content">
+            <h1 class="fade-in">
+              I am <span class="highlight" id="typed-text"></span>
+            </h1>
+            <p class="hero-subtitle fade-in-delay">
+              Create responsive websites for user-friendly experiences with
+              modern design.
+            </p>
+            <a
+              href="./assets/pdf/ZabiAhmedResume.pdf"
+              class="btn fade-in-delay"
+              download
+            >
+              Download Resume
+            </a>
+          </div>
         </section>
 
         <section id="about" class="section">
@@ -193,7 +203,11 @@
               />
               <div class="project-info">
                 <div class="flex-pr">
-                  <a href="https://money-zombie.vercel.app" target="_blank" class="project-name">
+                  <a
+                    href="https://money-zombie.vercel.app"
+                    target="_blank"
+                    class="project-name"
+                  >
                     <div class="project-title">Expense Manager</div>
                   </a>
                   <div class="project-hover">
@@ -258,8 +272,8 @@
                 </div>
                 <hr />
                 <p class="description">
-                  A small web app that lets users generate QR codes for
-                  any website link Or encode secret message.
+                  A small web app that lets users generate QR codes for any
+                  website link Or encode secret message.
                 </p>
               </div>
             </article>
@@ -353,7 +367,11 @@
               />
               <div class="project-info">
                 <div class="flex-pr">
-                  <a href="https://github.com/Zabi17/dashboard.git" target="_blank" class="project-name">
+                  <a
+                    href="https://github.com/Zabi17/dashboard.git"
+                    target="_blank"
+                    class="project-name"
+                  >
                     <div class="project-title">Professional Dashboard</div>
                   </a>
                   <div class="project-hover">
@@ -517,7 +535,7 @@
                 src="./assets/svg/express-svgrepo-com.svg"
                 alt="express"
                 height="30"
-              />Express.js
+              />Express Js
             </li>
             <li>
               <img

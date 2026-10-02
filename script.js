@@ -88,7 +88,7 @@ modeToggleInput.addEventListener("change", function () {
   }
 });
 
-/*-----------------------------  btn animation end---------------------------- */
+/*-----------------------------  /btn animation end---------------------------- */
 
 
 /* ----Auto Typing------ */
