@@ -94,7 +94,7 @@ modeToggleInput.addEventListener("change", function () {
 /* ----Auto Typing------ */
 var typed = new Typed(".highlight", {
   strings: ["Zabi Ahmed", "Web Developer", "Programmer", "Coding Enthusiast !"],
-  typeSpeed: 100,
+  typeSpeed: 80,
   backSpeed: 30,
   loop: true,
 });
