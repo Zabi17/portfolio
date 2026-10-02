@@ -351,6 +351,8 @@ footer {
   overflow-x: hidden;
   padding: 4rem;
   scroll-behavior: smooth;
+  display: flex;              /* ADD */
+  flex-direction: column;     /* ADD */
 }
 
 .hero button {
@@ -359,7 +361,11 @@ footer {
 
 /* SECTION BASE */
 .section {
-  min-height: 100vh;
+  min-height: 100%;              /* was 100vh */
+  flex: 1 0 auto;                /* ADD - lets it fill available space */
+  display: flex;                 /* ADD */
+  flex-direction: column;        /* ADD */
+  justify-content: center;       /* ADD */
   opacity: 0;
   transform: translateY(60px) scale(0.96);
   transition: opacity 0.85s ease-out,
@@ -410,7 +416,7 @@ footer {
   text-align: center;
   padding: 2rem;
   position: relative;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .hero-content {
@@ -514,19 +520,68 @@ h2 {
   margin-bottom: 1rem;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+/* Shared btn base (already exists, but ensure it's a link-friendly block) */
 .btn {
-  padding: 0.8rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.6rem;
   border: none;
-  background: #000;
+  background: rgb(20, 20, 20);
   color: #fff;
   border-radius: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.705);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   transition: all 0.3s;
   cursor: pointer;
   font-size: 1rem;
+  text-decoration: none;   /* for <a> tags */
   position: relative;
   z-index: 1;
   overflow: hidden;
+  font-weight: 500;
+}
+
+/* Secondary variant - outlined look */
+.btn-secondary {
+  background: transparent;
+  color: skyblue;
+  font-weight: 600;
+  border: 2px solid skyblue;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.15);
+}
+
+.btn-secondary:hover {
+  color: #fff;
+  border: 2px solid black;
+  font-weight: 600;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 123, 255, 0.5);
+}
+
+/* Make the secondary's shine effect blue */
+.btn-secondary::after {
+  content: "";
+  background: #007bff;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+.btn-secondary:hover::after {
+  transform: skewX(-45deg) scale(1, 1);
 }
 
 .btn:hover {
