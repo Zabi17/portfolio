@@ -351,6 +351,8 @@ footer {
   overflow-x: hidden;
   padding: 4rem;
   scroll-behavior: smooth;
+  display: flex;              /* ADD */
+  flex-direction: column;     /* ADD */
 }
 
 .hero button {
@@ -359,7 +361,11 @@ footer {
 
 /* SECTION BASE */
 .section {
-  min-height: 100vh;
+  min-height: 100%;              /* was 100vh */
+  flex: 1 0 auto;                /* ADD - lets it fill available space */
+  display: flex;                 /* ADD */
+  flex-direction: column;        /* ADD */
+  justify-content: center;       /* ADD */
   opacity: 0;
   transform: translateY(60px) scale(0.96);
   transition: opacity 0.85s ease-out,
@@ -400,15 +406,78 @@ footer {
 
 /* TEXT & ELEMENTS (HEADINGS + H1/H2) */
 /* HOME SECTION */
+/* HOME / HERO SECTION */
 #home {
-  margin-top: 20px;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  min-height: 100%;
 }
 
-.scroll-tip{
-  position: relative;
-  top: 160px;
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  max-width: 700px;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  color: var(--text-color);
+  opacity: 0.85;
+  line-height: 1.7;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.highlight {
+  color: #007bff;
+  text-shadow: 0 3px 5px #007bffa1;
+  display: inline-block;
+  min-width: 1ch;
+}
+
+/* Button as link */
+a.btn {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+/* Scroll tip - anchored to bottom of section */
+.scroll-tip {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
-  opacity: 0.2 !important; 
+  opacity: 0.4;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  animation: bounce 2s infinite;
+  margin: 0;
+  width: auto;
+  top: auto;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%      { transform: translateX(-50%) translateY(8px); }
 }
 
 h1,
@@ -451,28 +520,73 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.highlight {
-  color: #007bff;
-  text-shadow: 0 5px 10px #007bffa1;
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
 }
 
+/* Shared btn base (already exists, but ensure it's a link-friendly block) */
 .btn {
-  padding: 0.8rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.6rem;
   border: none;
   background: rgb(20, 20, 20);
   color: #fff;
   border-radius: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.705);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   transition: all 0.3s;
   cursor: pointer;
   font-size: 1rem;
+  text-decoration: none;   /* for <a> tags */
   position: relative;
   z-index: 1;
   overflow: hidden;
+  font-weight: 500;
+}
+
+/* Secondary variant - outlined look */
+.btn-secondary {
+  background: transparent;
+  color: skyblue;
+  font-weight: 600;
+  border: 2px solid skyblue;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.15);
+}
+
+.btn-secondary:hover {
+  color: #fff;
+  border: 2px solid black;
+  font-weight: 600;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 123, 255, 0.5);
+}
+
+/* Make the secondary's shine effect blue */
+.btn-secondary::after {
+  content: "";
+  background: #007bff;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+.btn-secondary:hover::after {
+  transform: skewX(-45deg) scale(1, 1);
 }
 
 .btn:hover {
-  color: white;
+  color: black;
+  font-weight: 500;
   transform: translateY(-3px);
   box-shadow: 0 8px 12px black;
 }
@@ -991,6 +1105,12 @@ body.animate-in .profile {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
+  body {
+    height: 100dvh;
+    align-items: stretch;
+    justify-content: stretch;
+  }
+
   .sidebar {
     transform: translateX(-100%);
     position: absolute;
@@ -1005,12 +1125,19 @@ body.animate-in .profile {
   }
 
   .portfolio-card {
+    width: 100%;
+    height: 100dvh;
+    border-radius: 0;
+    box-shadow: none;
     flex-direction: column;
-    height: 95vh;
   }
 
   .main-content {
     padding: 2rem;
+  }
+
+  .section {
+    min-height: auto;
   }
 
   #projects h2 {
@@ -1019,10 +1146,11 @@ body.animate-in .profile {
 }
 
 @media (max-width: 768px) {
+  #about,
   #skills,
   #contact,
   #experience {
-    padding: 2rem 1.2rem;
+    padding: 2rem 1rem;
   }
   #skills h2,
   #contact h2,
@@ -1038,7 +1166,7 @@ body.animate-in .profile {
   }
   #about p {
     font-size: 0.80rem;
-    padding: 1.2rem 1.4rem;
+    padding: 1.2rem 1.25rem;
   }
   #image-track  img {
     width: 40vmin;
@@ -1046,6 +1174,6 @@ body.animate-in .profile {
   }
 
   .main-content{
-    padding: 1.5rem;
+    padding: 1.1rem;
   }
 }

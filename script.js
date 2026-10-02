@@ -88,13 +88,13 @@ modeToggleInput.addEventListener("change", function () {
   }
 });
 
-/*-----------------------------  btn animation end---------------------------- */
+/*-----------------------------  /btn animation end---------------------------- */
 
 
 /* ----Auto Typing------ */
 var typed = new Typed(".highlight", {
   strings: ["Zabi Ahmed", "Web Developer", "Programmer", "Coding Enthusiast !"],
-  typeSpeed: 100,
+  typeSpeed: 80,
   backSpeed: 30,
   loop: true,
 });

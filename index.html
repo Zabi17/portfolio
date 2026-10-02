@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -39,7 +39,9 @@
       </aside>
 
       <!-- Toggle Button -->
-      <button class="toggle-btn" id="toggle-btn" title="open Sidebar">☰</button>
+      <button class="toggle-btn" id="toggle-btn" title="open Sidebar">
+        ☰
+      </button>
 
       <!-- Light/Dark Toggle -->
       <button class="mode-btn" id="mode-btn" title="Toggle Light/Dark Mode">
@@ -113,16 +115,18 @@
       <!-- Main Content -->
       <main class="main-content">
         <section id="home" class="section hero">
-          <h1 class="fade-in">I am <span class="highlight"></span></h1>
-          <p class="fade-in-delay">
-            Create responsive wesites for user friendly experiences with modern
-            design.
-          </p>
-          <a href="./assets/pdf/ZabiAhmedResume.pdf"
-            ><button class="btn fade-in-delay">Download Resume</button></a
-          >
-          <p class="scroll-tip">⇓⇓⇓ Scroll Down ⇓⇓⇓</p>
-        </section>
+  <div class="hero-content">
+    <h1 class="fade-in">
+      <span class="static-text">I am </span><span class="highlight"></span>
+    </h1>
+    <p class="hero-subtitle fade-in-delay">
+      Turning ideas into scalable web application with modern web experiences [ Scaleability | Architecture | Experience. ]</p>
+    <div class="hero-buttons fade-in-delay">
+      <a href="#projects" class="btn btn-secondary">View Projects</a>
+      <a href="./assets/pdf/ZabiAhmedResume.pdf" class="btn" download>Download Resume</a>
+    </div>
+  </div>
+</section>
 
         <section id="about" class="section">
           <h2>About Me</h2>
@@ -186,6 +190,7 @@
                 </p>
               </div>
             </article>
+
             <article class="article-wrapper">
               <img
                 src="./assets/images/expense_manager_1.png"
@@ -194,7 +199,11 @@
               />
               <div class="project-info">
                 <div class="flex-pr">
-                  <a href="https://money-zombie.vercel.app" target="_blank" class="project-name">
+                  <a
+                    href="https://money-zombie.vercel.app"
+                    target="_blank"
+                    class="project-name"
+                  >
                     <div class="project-title">Expense Manager</div>
                   </a>
                   <div class="project-hover">
@@ -223,6 +232,90 @@
                 </p>
               </div>
             </article>
+
+            <article class="article-wrapper">
+              <img
+                src="./assets/images/mjp.png"
+                alt="Megathil Job portal"
+                class="container-project"
+              />
+              <div class="project-info">
+                <div class="flex-pr">
+                  <a
+                    href="https://jobs.megathil.com/"
+                    target="_blank"
+                    class="project-name"
+                  >
+                    <div class="project-title">Job Portal</div>
+                  </a>
+                  <div class="project-hover">
+                    <svg
+                      style="color: black"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2em"
+                      height="2em"
+                      color="black"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <line x1="12" y1="19" x2="12" y2="5"></line>
+                      <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <hr />
+                <p class="description">
+                  Megathil Job Portal connects colleges, corporates and Job seekers in one unified space. With super admin access control.
+                </p>
+              </div>
+            </article>
+
+            <article class="article-wrapper">
+              <img
+                src="./assets/images/tc.png"
+                alt="Talent confluence"
+                class="container-project"
+              />
+              <div class="project-info">
+                <div class="flex-pr">
+                  <a
+                    href="https://talentconfluence.megathil.com/"
+                    target="_blank"
+                    class="project-name"
+                  >
+                    <div class="project-title">Event Manager</div>
+                  </a>
+                  <div class="project-hover">
+                    <svg
+                      style="color: black"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2em"
+                      height="2em"
+                      color="black"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <line x1="12" y1="19" x2="12" y2="5"></line>
+                      <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <hr />
+                <p class="description">
+                  Talent Confluence is a platform for events, workshops, and networking
+                  opportunities.
+                </p>
+              </div>
+            </article>
+
             <article class="article-wrapper">
               <img
                 src="./assets/images/qr-img.png"
@@ -259,11 +352,12 @@
                 </div>
                 <hr />
                 <p class="description">
-                  A small web app that lets users generate QR codes for
-                  any website link Or encode secret message.
+                  A small web app that lets users generate QR codes for any
+                  website link Or encode secret message.
                 </p>
               </div>
             </article>
+
             <article class="article-wrapper">
               <img
                 src="./assets/images/Todo-list-React.png"
@@ -305,6 +399,7 @@
                 </p>
               </div>
             </article>
+
             <article class="article-wrapper">
               <img
                 src="./assets/images/Todo-list-jQuery.png"
@@ -346,6 +441,7 @@
                 </p>
               </div>
             </article>
+
             <article class="article-wrapper">
               <img
                 src="./assets/images/dashboard.png"
@@ -354,7 +450,11 @@
               />
               <div class="project-info">
                 <div class="flex-pr">
-                  <a href="https://github.com/Zabi17/dashboard.git" target="_blank" class="project-name">
+                  <a
+                    href="https://github.com/Zabi17/dashboard.git"
+                    target="_blank"
+                    class="project-name"
+                  >
                     <div class="project-title">Professional Dashboard</div>
                   </a>
                   <div class="project-hover">
@@ -383,6 +483,7 @@
                 </p>
               </div>
             </article>
+
             <article class="article-wrapper">
               <img
                 src="./assets/images/turf.png"
@@ -420,44 +521,6 @@
                 </p>
               </div>
             </article>
-            <article class="article-wrapper">
-              <img
-                src="./assets/images/portfolio.png"
-                alt=""
-                class="container-project"
-              />
-              <div class="project-info">
-                <div class="flex-pr">
-                  <a href="#" class="project-name">
-                    <div class="project-title">Portfolio</div>
-                  </a>
-                  <div class="project-hover">
-                    <svg
-                      style="color: black"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="2em"
-                      height="2em"
-                      color="black"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      fill="none"
-                      stroke="currentColor"
-                    >
-                      <line x1="12" y1="19" x2="12" y2="5"></line>
-                      <polyline points="5 12 12 5 19 12"></polyline>
-                    </svg>
-                  </div>
-                </div>
-                <hr />
-                <p class="description">
-                  Personal website displaying projects, skills, experience,
-                  contact information, and achievements for professional
-                  showcasing online.
-                </p>
-              </div>
-            </article>
           </div>
         </section>
 
@@ -487,6 +550,13 @@
             </li>
             <li>
               <img
+                src="./assets/svg/TypeScript.svg"
+                alt="API"
+                height="35"
+              />TypeScript
+            </li>
+            <li>
+              <img
                 src="./assets/svg/react-svgrepo-com.svg"
                 alt="react"
                 height="30"
@@ -498,6 +568,13 @@
                 alt="BootStrap"
                 height="30"
               />BootStrap
+            </li>
+            <li>
+              <img
+                src="./assets/svg/prisma-svgrepo-com.svg"
+                alt="Prisma"
+                height="30"
+              />Prisma
             </li>
             <li>
               <img
@@ -515,7 +592,7 @@
             </li>
             <li>
               <img
-                src="./assets/svg/express-svgrepo-com.svg"
+                src="./assets/svg/express-svgrepo-com.png"
                 alt="express"
                 height="30"
               />Express.js
@@ -554,6 +631,13 @@
                 alt="API"
                 height="35"
               />RESTful API
+            </li>
+            <li>
+              <img
+                src="./assets/svg/nextjs-icon-svgrepo-com.svg"
+                alt="Next.js"
+                height="35"
+              />Next.js
             </li>
           </ul>
         </section>
