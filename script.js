@@ -6,15 +6,28 @@ window.addEventListener("load", () => {
 // Sidebar toggle for mobile
 const toggleBtn = document.getElementById("toggle-btn");
 const sidebar = document.getElementById("sidebar");
+const backdrop = document.getElementById("backdrop");
+
+function setSidebar(open) {
+  sidebar.classList.toggle("open", open);
+  backdrop?.classList.toggle("show", open);
+  toggleBtn.textContent = open ? "✕" : "☰";
+  toggleBtn.setAttribute("aria-expanded", String(open));
+}
 
 if (toggleBtn && sidebar) {
-  toggleBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("open");
+  toggleBtn.addEventListener("click", () =>
+    setSidebar(!sidebar.classList.contains("open")),
+  );
+  backdrop?.addEventListener("click", () => setSidebar(false));
+  document
+    .querySelectorAll(".nav-links a")
+    .forEach((a) => a.addEventListener("click", () => setSidebar(false)));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setSidebar(false);
   });
-
-  // Optional: close sidebar when resizing up to desktop
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 900) sidebar.classList.remove("open");
+    if (window.innerWidth > 900) setSidebar(false);
   });
 }
 
@@ -25,8 +38,8 @@ const sections = document.querySelectorAll(".section");
 if (mainContent && sections.length) {
   const obsOptions = {
     root: mainContent,
-    rootMargin: "0px",
-    threshold: 0.15, // 15% of section visible triggers animation
+    rootMargin: "0px 0px -10% 0px",
+    threshold: 0,
   };
 
   const sectionObserver = new IntersectionObserver((entries, observer) => {
@@ -49,20 +62,28 @@ if (mainContent && sections.length) {
 
 // Active link highlight
 const navLinks = document.querySelectorAll(".nav-links a");
-mainContent.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    if (mainContent.scrollTop >= sectionTop - 200) {
-      current = section.id;
-    }
-  });
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${current}`)
-      link.classList.add("active");
-  });
-});
+mainContent?.addEventListener(
+  "scroll",
+  () => {
+    let current = "";
+    sections.forEach((section) => {
+      if (mainContent.scrollTop >= section.offsetTop - 200)
+        current = section.id;
+    });
+    const atBottom =
+      mainContent.scrollTop + mainContent.clientHeight >=
+      mainContent.scrollHeight - 4;
+    if (atBottom) current = sections[sections.length - 1].id;
+
+    navLinks.forEach((link) => {
+      link.classList.toggle(
+        "active",
+        link.getAttribute("href") === `#${current}`,
+      );
+    });
+  },
+  { passive: true },
+);
 
 /*----------------------------- btn animation start---------------------------- */
 
@@ -79,13 +100,10 @@ if (localStorage.getItem("theme") === "light") {
 
 // Listen for changes to the toggle (switch)
 modeToggleInput.addEventListener("change", function () {
-  if (this.checked) {
-    document.body.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  } else {
-    document.body.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-  }
+  document.body.classList.toggle("dark", this.checked);
+  try {
+    localStorage.setItem("theme", this.checked ? "dark" : "light");
+  } catch (e) {}
 });
 
 /*-----------------------------  /btn animation end---------------------------- */
